@@ -7,11 +7,12 @@ class App extends Component {
 
   state = {
     movies: null,
-    searchType: "s"
+    searchType: "s",
+    wildcard: ""
   }
 
   getMovies = (searchTerm) => {
-    fetch(`http://www.omdbapi.com/?${this.state.searchType}=${searchTerm}*&plot=full&apikey=4f7fe0c3`)
+    fetch(`http://www.omdbapi.com/?${this.state.searchType}=${searchTerm}${this.state.wildcard}&plot=full&apikey=4f7fe0c3`)
       .then(response => response.json())
       .then(data => this.setState({ movies: data }))
       .catch(error => this.setState({ movies: error }));
