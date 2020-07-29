@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9169d5baf24d618bf8e2fdec05bc0146",
+    "revision": "9a90197b46649a1052343cf18b0059dc",
     "url": "/not-another-movie-database/index.html"
   },
   {
-    "revision": "504a0b964b8ab828bad1",
+    "revision": "72b9c3902f05ac218f4b",
     "url": "/not-another-movie-database/static/css/main.037a5756.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/not-another-movie-database/static/js/2.9a45f5c8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "504a0b964b8ab828bad1",
-    "url": "/not-another-movie-database/static/js/main.87892f17.chunk.js"
+    "revision": "72b9c3902f05ac218f4b",
+    "url": "/not-another-movie-database/static/js/main.4ef1a622.chunk.js"
   },
   {
     "revision": "8c3f41b65db74f86cf7c",
