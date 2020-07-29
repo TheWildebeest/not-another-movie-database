@@ -1,0 +1,23 @@
+.searchBox {
+  height: 15%;
+  width: 100%;
+  border-radius: 0.5em;
+  outline: none;
+  padding: 0 2%;
+  border: white solid 1px;
+  background-color: transparent;
+  line-height: 1.5em;
+  color: white;
+  font-family: "card-body";
+  font-weight: bold;
+  font-size: 22px;
+
+  &::placeholder {
+    line-height: 1.5em;
+    color: white;
+    font-family: "nav";
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}

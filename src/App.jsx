@@ -6,23 +6,27 @@ import './App.css';
 class App extends Component {
 
   state = {
-    movies: null,
-    searchType: "s",
+    movies: [],
+    year: "*",
     wildcard: ""
   }
 
+  getYear = (year) => {
+    this.setState({ year: year })
+  }
+
   getMovies = (searchTerm) => {
-    fetch(`http://www.omdbapi.com/?${this.state.searchType}=${searchTerm}${this.state.wildcard}&plot=full&apikey=4f7fe0c3`)
+    fetch(`http://www.omdbapi.com/?s=${searchTerm}*&y=${this.state.year}&plot=full&apikey=4f7fe0c3`)
       .then(response => response.json())
-      .then(data => this.setState({ movies: data }))
+      .then(data => this.setState({ movies: data.Search }))
       .catch(error => this.setState({ movies: error }));
   }
 
 
   render() {
-    const { movies, searchTerm } = this.state;
+    const { movies } = this.state;
     return (
-      <Pages movies={movies} searchTerm={searchTerm} getMovies={this.getMovies} />
+      <Pages movies={movies} getMovies={this.getMovies} getYear={this.getYear} />
     );
   }
 }

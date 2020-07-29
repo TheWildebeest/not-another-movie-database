@@ -2,17 +2,19 @@ import React, { Component } from "react";
 import { Router } from '@reach/router'
 import MoviesByTitle from '../../components/MoviesByTitle';
 import MoviesByYear from '../../components/MoviesByYear';
+import Homepage from '../../components/Homepage';
 import NavBar from '../../components/NavBar';
 
 class Pages extends Component {
   render() {
-    const { movies, getMovies } = this.props;
+    const { movies, getMovies, getYear } = this.props;
     return (
       <>
-        <NavBar getMovies={getMovies} />
+        <NavBar />
         <Router>
-          <MoviesByTitle default path="search-movies" movies={movies} />
-          <MoviesByYear path="search-movies-by-year" movies={movies} />
+          <Homepage default />
+          <MoviesByTitle path="search-movies" movies={movies} getMovies={getMovies} />
+          <MoviesByYear path="search-by-year" movies={movies} getMovies={getMovies} getYear={getYear} />
         </Router>
       </>
     );

@@ -1,0 +1,22 @@
+.main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 5% 0 30vh 0;
+  height: 65%;
+  background-image: url("https://64.media.tumblr.com/b53f68bf7665be973831a7212c88d63d/tumblr_mfrfwbvYzs1qg6rkio1_500.gifv");
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat-x;
+  border-top: 2px white ridge;
+  border-bottom: 2px white ridge;
+  display: grid;
+  place-items: center;
+
+  .mainTitle {
+    text-align: center;
+    font-family: "page-title";
+    font-size: 3em;
+  }
+}

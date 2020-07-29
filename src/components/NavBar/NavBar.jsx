@@ -20,25 +20,26 @@ class NavBar extends Component {
   }
 
   render() {
+    const { setSearchType } = this.props
     return (
       <>
         <header>
           <nav className={styles.navBar + " " + (this.state.navIsShowing ? styles.displayNav : "")}>
             <ul className={styles.navWrapper}>
               <li className={styles.navToggler}>
-                <div className={styles.navBurger + " " + (this.state.navIsShowing ? styles.navOpen : "")} onClick={this.toggleNav}>
+                <div className={styles.navBurger} onClick={this.toggleNav}>
                   <h3>{this.toggleIcon()}</h3>
                 </div>
               </li>
               <ul className={styles.navOptions + " " + (this.state.navIsShowing ? styles.navOpen : "")}>
                 <li>
                   <div className={styles.searchOption}>
-                    <h3>Search by title</h3>
+                    <Link to="search-movies" onClick={setSearchType}><h3>Search by<br />movie title</h3></Link>
                   </div>
                 </li>
                 <li>
                   <div className={styles.searchOption}>
-                    <h3>Search by year</h3>
+                    <Link to="search-by-year"><h3>Search by<br />year of release</h3></Link>
                   </div>
                 </li>
               </ul>
