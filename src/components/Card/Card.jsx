@@ -7,6 +7,9 @@ class Card extends Component {
     return (
       <article className={styles.card}>
         <div className={styles.moviePoster} style={movie.Poster.split("")[0] === "h" ? { backgroundImage: `url("${movie.Poster}")` } : { backgroundImage: `url("https://picsum.photos/220/336")` }}>
+          <h5 className={styles.movieYear}>
+            {movie.Year}
+          </h5>
         </div>
         <header className={styles.titleWrapper}>
           <h4 className={styles.movieTitle}>{movie.Title}</h4>

@@ -28,9 +28,22 @@
     border-bottom: 2px white solid;
     filter: grayscale(100%);
     transition: filter 1.5s ease;
+    display: grid;
+    place-items: center;
 
+    .movieYear {
+      color: transparent;
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+      transition: color 1.5s ease;
+      font-size: 3em;
+      font-family: card-title;
+    }
     &:hover {
       filter: none;
+      > .movieYear {
+        color: hotpink;
+      }
     }
   }
 
