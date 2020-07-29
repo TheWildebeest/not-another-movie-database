@@ -3,14 +3,15 @@ import styles from "./CardList.module.scss";
 import Card from '../../components/Card';
 
 class CardList extends Component {
-  getCardJsx = (movie) => (
-    <Card key={movie.Title} movie={movie} />
+  getCardJsx = (movie, index) => (
+    <Card key={index} movie={movie} />
   );
 
   render() {
     const { movies } = this.props;
     return (
-      <section className={styles.cardList}>{movies ? movies.map((movie) => this.getCardJsx(movie)) : null}</section>
+      <section className={styles.cardList}>{
+        movies ? movies.map((movie, index) => this.getCardJsx(movie, index)) : null}</section>
     );
   }
 }

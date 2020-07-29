@@ -7,14 +7,14 @@ import NavBar from '../../components/NavBar';
 
 class Pages extends Component {
   render() {
-    const { movies, getMovies, getYear } = this.props;
+    const { movies, moviesByYear, getMovies, getYear } = this.props;
     return (
       <>
         <NavBar />
         <Router>
           <Homepage default />
           <MoviesByTitle path="search-movies" movies={movies} getMovies={getMovies} />
-          <MoviesByYear path="search-by-year" movies={movies} getMovies={getMovies} getYear={getYear} />
+          <MoviesByYear path="search-by-year" movies={movies} moviesByYear={moviesByYear} getMovies={getMovies} getYear={getYear} />
         </Router>
       </>
     );

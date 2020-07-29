@@ -9,7 +9,7 @@ class MoviesByTitle extends Component {
     return (
       <>
         <main className={styles.main}>
-          <SearchBox getMovies={getMovies} />
+          <SearchBox inputHandler={(e) => getMovies(e.target.value)} placeholder={"e.g. 'Singin' in the rain'"} />
           <CardList movies={movies} />
         </main>
       </>

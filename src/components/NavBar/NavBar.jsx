@@ -39,7 +39,7 @@ class NavBar extends Component {
                 </li>
                 <li>
                   <div className={styles.searchOption}>
-                    <Link to="search-by-year"><h3>Search by<br />year of release</h3></Link>
+                    <Link to="search-by-year"><h3>Filter by<br />year of release</h3></Link>
                   </div>
                 </li>
               </ul>

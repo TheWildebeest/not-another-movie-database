@@ -5,7 +5,7 @@ class Homepage extends Component {
   render() {
     return (
       <main className={styles.main}>
-        <h1 className={styles.mainTitle}>Yet<br /> Another<br />Movie<br />Database</h1>
+        <h1 className={styles.mainTitle}>Oh dear, NOT<br />ANOTHER<br />movie<br />DAT<span className={styles.special}>A</span>BASE<span className={styles.special}>!</span></h1>
       </main>
     );
   }
